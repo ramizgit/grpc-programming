@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.myhelloworld";
+option java_outer_classname = "MyHelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package myhelloworld;
+
+service HelloWorldGreeter {
+  rpc SayHello (HelloWorldRequest) returns (HelloWorldResponse) {}
+}
+
+message HelloWorldRequest {
+  string name = 1;HelloWorldGreeter
+}
+
+message HelloWorldResponse {
+  string message = 1;
+}
