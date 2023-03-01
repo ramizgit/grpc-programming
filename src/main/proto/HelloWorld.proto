@@ -11,6 +11,10 @@ service HelloWorldGreeter {
   rpc SayHello (HelloWorldRequest) returns (HelloWorldResponse) {}
 }
 
+service HelloWorldServerStreamingGreeter {
+  rpc SayHello (HelloWorldRequest) returns (stream HelloWorldResponse) {}
+}
+
 message HelloWorldRequest {
   string name = 1;HelloWorldGreeter
 }
