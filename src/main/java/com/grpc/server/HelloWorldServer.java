@@ -11,7 +11,13 @@ public class HelloWorldServer {
 
     public HelloWorldServer(int port)
     {
-        this.server = ServerBuilder.forPort(port).addService(new HelloWorldService()).build();
+        this.server = ServerBuilder.
+                forPort(port).
+                addService(new HelloWorldService()).
+                addService(new HelloWorldServerStreamingService()).
+                addService(new HelloWorldClientStreamingService()).
+                addService(new HelloWorldFullStreamingService()).
+                build();
     }
 
     public void start() throws IOException, InterruptedException {
