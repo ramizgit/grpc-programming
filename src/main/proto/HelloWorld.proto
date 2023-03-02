@@ -7,16 +7,23 @@ option objc_class_prefix = "HLW";
 
 package myhelloworld;
 
+//simple client and server, without any streaming
 service HelloWorldGreeter {
   rpc SayHello (HelloWorldRequest) returns (HelloWorldResponse) {}
 }
 
+//only service side streaming
 service HelloWorldServerStreamingGreeter {
   rpc SayHello (HelloWorldRequest) returns (stream HelloWorldResponse) {}
 }
 
+//only client side streaming
+service HelloWorldClientStreamingGreeter {
+  rpc SayHello (stream HelloWorldRequest) returns (HelloWorldResponse) {}
+}
+
 message HelloWorldRequest {
-  string name = 1;HelloWorldGreeter
+  string name = 1;
 }
 
 message HelloWorldResponse {
