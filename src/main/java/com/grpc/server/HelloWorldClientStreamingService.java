@@ -11,7 +11,6 @@ public class HelloWorldClientStreamingService extends HelloWorldClientStreamingG
     public StreamObserver<HelloWorldRequest> sayHello(final StreamObserver<HelloWorldResponse> responseObserver) {
 
         return new StreamObserver<HelloWorldRequest>() {
-
             StringBuilder sb = new StringBuilder("Welcome all : ");
 
             public void onNext(HelloWorldRequest helloWorldRequest) {
