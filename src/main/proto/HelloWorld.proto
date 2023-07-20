@@ -22,7 +22,7 @@ service HelloWorldClientStreamingGreeter {
   rpc SayHello (stream HelloWorldRequest) returns (HelloWorldResponse) {}
 }
 
-//both server and client side streaming
+//sample for both server and client side streaming
 service HelloWorldFullStreamingGreeter {
   rpc SayHello (stream HelloWorldRequest) returns (stream HelloWorldResponse) {}
 }
