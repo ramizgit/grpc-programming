@@ -12,7 +12,7 @@ service HelloWorldGreeter {
   rpc SayHello (HelloWorldRequest) returns (HelloWorldResponse) {}
 }
 
-//only service side streaming
+//sample for only service side streaming
 service HelloWorldServerStreamingGreeter {
   rpc SayHello (HelloWorldRequest) returns (stream HelloWorldResponse) {}
 }
